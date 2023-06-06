@@ -2,7 +2,7 @@
 <html>
 <head>
   <title>Student Attributes Table</title>
-  <link rel="stylesheet" href="./resources/css/asn2.css">
+  <link rel="stylesheet" type="text/css" href="styles.css">
 </head>
 <body>
   <table>
@@ -17,31 +17,18 @@
     </thead>
     <tbody>
       <tr>
-        <td>Student 1</td>
-        <td>150 lbs</td>
-        <td>65 inches</td>
-        <td>Blonde</td>
-        <td>3.5</td>
-      </tr>
-      <tr>
-        <td>Student 2</td>
-        <td>130 lbs</td>
-        <td>63 inches</td>
-        <td>Brown</td>
-        <td>3.2</td>
-      </tr>
-      <tr>
-        <td>Student 3</td>
-        <td>170 lbs</td>
-        <td>68 inches</td>
-        <td>Black</td>
-        <td>3.8</td>
+        <td><input type="text" class="name-input"></td>
+        <td><input type="text" class="weight-input"></td>
+        <td><input type="text" class="height-input"></td>
+        <td><input type="text" class="hair-color-input"></td>
+        <td><input type="text" class="gpa-input"></td>
+        <td><button onclick="addStudent()">Add</button></td>
       </tr>
     </tbody>
   </table>
   
   <div id="student-boxes"></div>
   
-  <script src="./asn2.js"></script>
+  <script src="script.js"></script>
 </body>
 </html>
