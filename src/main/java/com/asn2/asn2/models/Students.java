@@ -1,52 +1,60 @@
 package com.asn2.asn2.models;
 
 public class Students {
-
     private String name;
-    private float heigh;
-    private float weight;
-    private String hair_color;
-    private float gpa;
+    private double height;
+    private double weight;
+    private String hairColor;
+    private double gpa;
 
     public Students() {
     }
-    public Students(String name, float heigh, float weight, String hair_color, float gpa) {
+
+    public Students(String name, double height, double weight, String hairColor, double gpa) {
         this.name = name;
-        this.heigh = heigh;
+        this.height = height;
         this.weight = weight;
-        this.hair_color = hair_color;
+        this.hairColor = hairColor;
         this.gpa = gpa;
     }
 
     public String getName() {
         return name;
     }
-    public float getHeigh() {
-        return heigh;
+
+    public double getHeight() {
+        return height;
     }
-    public float getWeight() {
+
+    public double getWeight() {
         return weight;
     }
-    public String getHair_color() {
-        return hair_color;
+
+    public String getHairColor() {
+        return hairColor;
     }
-    public float getGpa() {
+
+    public double getGpa() {
         return gpa;
     }
+
     public void setName(String name) {
         this.name = name;
     }
-    public void setHeigh(float heigh) {
-        this.heigh = heigh;
+
+    public void setHeight(double height) {
+        this.height = height;
     }
-    public void setWeight(float weight) {
+
+    public void setWeight(double weight) {
         this.weight = weight;
     }
-    public void setHair_color(String hair_color) {
-        this.hair_color = hair_color;
+
+    public void setHairColor(String hairColor) {
+        this.hairColor = hairColor;
     }
-    public void setGpa(float gpa) {
+
+    public void setGpa(double gpa) {
         this.gpa = gpa;
     }
-    
 }
