@@ -20,6 +20,9 @@
                         <span th:text="${student.weight}"></span> <br>
                         <span th:text="${student.hairColor}"></span> <br>
                         <span th:text="${student.gpa}"></span> <br>
+                        <div th:switch="${student.name}">
+                            <span th:case="'isa'"> Hey! </span>
+                        </div>
                     </li>
                 </ul>
             </div>
