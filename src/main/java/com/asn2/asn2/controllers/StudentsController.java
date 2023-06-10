@@ -31,7 +31,7 @@ public class StudentsController {
         System.out.println("Get Student:" + uid);
 
         int id = Integer.parseInt(uid);
-        Students st = StudentRepository.findById(id).get();
+        Students st = StudentRepository.findByName(uid).get();
         StudentRepository.delete(st);
 
         model.addAttribute("student");
