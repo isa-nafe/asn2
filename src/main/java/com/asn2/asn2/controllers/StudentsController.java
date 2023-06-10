@@ -1,4 +1,5 @@
 package com.asn2.asn2.controllers;
+import com.asn2.asn2.models.StudentRepository;
 import com.asn2.asn2.models.Students;
 
 import java.util.ArrayList;
@@ -7,6 +8,7 @@ import java.util.List;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 
 @Controller
 public class StudentsController {
@@ -22,5 +24,17 @@ public class StudentsController {
         // end of database call
         model.addAttribute("st", students);
         return "students/showAll";
+    }
+
+    @GetMapping("/dtudents/view/{uid}")
+    public String getStudent(Model model, @PathVariable String uid){
+        System.out.println("Get Student:" + uid);
+
+        int id = Integer.parseInt(uid);
+        Students st = StudentRepository.findById(id).get();
+        StudentRepository.delete(st);
+
+        model.addAttribute("student");
+        return "showStudent";
     }
 }
