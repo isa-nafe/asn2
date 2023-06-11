@@ -71,6 +71,7 @@ function displayStudentsTable() {
 
     const actionCell = document.createElement('td');
     const deleteBtn = document.createElement('button');
+    
     // Add event listener to the delete button
     deleteBtn.textContent = 'Delete';
     deleteBtn.addEventListener('click', () => deleteStudent(index));

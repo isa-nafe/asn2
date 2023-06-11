@@ -1,16 +1,16 @@
 package com.asn2.asn2.models;
 
-public class Students {
+public class Student {
     private String name;
     private double height;
     private double weight;
     private String hairColor;
     private double gpa;
 
-    public Students() {
+    public Student() {
     }
 
-    public Students(String name, double height, double weight, String hairColor, double gpa) {
+    public Student(String name, double height, double weight, String hairColor, double gpa) {
         this.name = name;
         this.height = height;
         this.weight = weight;
@@ -58,3 +58,5 @@ public class Students {
         this.gpa = gpa;
     }
 }
+
+// connect js with java

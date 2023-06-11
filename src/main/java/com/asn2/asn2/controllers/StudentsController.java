@@ -1,6 +1,6 @@
 package com.asn2.asn2.controllers;
 
-import com.asn2.asn2.models.Students;
+import com.asn2.asn2.models.Student;
 import com.asn2.asn2.models.StudentRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
@@ -10,25 +10,25 @@ import java.util.List;
 @RestController
 @RequestMapping("/students")
 public class StudentsController {
-    private final StudentRepository studentRepository;
+    //private final StudentRepository studentRepository;
 
-    @Autowired
-    public StudentsController(StudentRepository studentRepository) {
-        this.studentRepository = studentRepository;
-    }
+//    @Autowired
+//    public StudentsController(StudentRepository studentRepository) {
+//
+//    }
 
     @GetMapping
-    public List<Students> getAllStudents() {
-        return studentRepository.findAll();
+    public List<Student> getAllStudents() {
+        return List.of(new Student("Isa", 180, 80, "black", 8.0));
     }
 
     @PostMapping
-    public Students addStudent(@RequestBody Students student) {
-        return studentRepository.save(student);
+    public Student addStudent(@RequestBody Student student) {
+        return new Student();
     }
 
     @DeleteMapping("/{id}")
     public void deleteStudent(@PathVariable Long id) {
-        studentRepository.deleteById(id);
+
     }
 }
